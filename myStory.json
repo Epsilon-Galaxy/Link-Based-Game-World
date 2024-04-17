@@ -1,0 +1,225 @@
+{
+    "Title": "The Quest for a Fine Meal",
+    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
+    "InitialLocation": "Town",
+    "Locations": {
+        "Town": {
+            "Body": "Your local run of the mill town",
+            "Choices": [
+                {
+                    "Text": "West",
+                    "Target": "Western Plains"
+                },
+                {
+                    "Text": "East",
+                    "Target": "Eastern Plains"
+                },
+                {
+                    "Text": "Tavern",
+                    "Target": "Tavern"
+                }
+            ]
+        },
+        "Tavern": {
+            "Body": "A bustling tavern within the town a popular spot for many adventurers and commonfolk alike.",
+            "Choices": [
+                {
+                    "Text": "Back Outside",
+                    "Target": "Town"
+                },
+                {
+                    "Text": "Sneak into the Tavern basement",
+                    "Target": "Tavern Basement"
+                },
+                {
+                    "Interactable": true,
+                    "Text": "Eat a Meal",
+                    "Loc": "Tavern",
+                    "Description": "You eat a typical run of the mill everyday meal that you have here"
+                },
+                {
+                    "Interactable": true,
+                    "Requirement": false,
+                    "Text": "Premium Meal",
+                    "Loc": "Tavern",
+                    "Description": "You don't have enough gold to eat this meal",
+                    "Description2": "You eat the finest meal you've ever eaten in your entire life. Caviar, Gold foil. You fall asleep into a food coma and come to a long deserved rest after your arduous journey."
+                }
+            ]
+        },
+        "Tavern Basement": {
+            "Body": "The Basement of the Tavern",
+            "Choices": [
+                {
+                    "Text": "Back to the Tavern",
+                    "Target": "Tavern"
+                },
+                {
+                    "Text": "Snoop around a little Longer",
+                    "Target": "Town Jail"
+                },
+                {
+                    "Interactable": true,
+                    "Text": "Explore the room",
+                    "Loc": "Tavern Basement",
+                    "Description": "You read a paper stored away in the basement which tells you of a shrine at the end of the misty forest in the east. Perhaps you could make some money there."
+                }
+            ]
+        },
+        "Town Jail": {
+            "Body": "You've been caught and you're now thrown into the Town Jail",
+            "Choices": [
+                {
+                    "Text": "Escape",
+                    "Target": "Western Plains"
+                }
+            ]
+        },
+        "Western Plains": {
+            "Body": "The Plains West of the town",
+            "Choices": [
+                {
+                    "Text": "To Town",
+                    "Target": "Town"
+                }
+            ]
+        },
+        "Eastern Plains": {
+            "Body": "The larger eastern plains east of the town",
+            "Choices": [
+                {
+                    "Text": "Back to Town",
+                    "Target": "Town"
+                },
+                {
+                    "Text": "Explore to the south",
+                    "Target": "Southern Swamp"
+                },
+                {
+                    "Text": "Explore deep towards a mysterious forest",
+                    "Target": "Misty Grove"
+                }
+            ]
+        },
+        "Southern Swamp": {
+            "Body": "Gross its' wet here",
+            "Choices": [
+                {
+                    "Text": "March out of this swamp",
+                    "Target": "Eastern Plains"
+                }
+            ]
+        },
+        "Misty Grove": {
+            "Body": "The start of a large misty forest",
+            "Choices": [
+                {
+                    "Text": "Back to safety",
+                    "Target": "Eastern Plains"
+                },
+                {
+                    "Interactable": true,
+                    "Requirement": false,
+                    "Text": "Brave the mist",
+                    "Loc": "Misty Grove",
+                    "Description": "You have no reason to go out and get lost in that forest.",
+                    "Description2": "You pass through the forest on a quest for some money.",
+                    "Target": "Misty Forest 1"
+                }
+            ]
+        },
+        "Misty Forest 1": {
+            "Body": "You're lost where do you go?",
+            "Choices": [
+                {
+                    "Text": "Here?",
+                    "Target": "Misty Grove"
+                },
+                {
+                    "Text": "There?",
+                    "Target": "Misty Forest 2"
+                }
+            ]
+        },
+        "Misty Forest 2": {
+            "Body": "You're lost where do you go?",
+            "Choices": [
+                {
+                    "Text": "Where?",
+                    "Target": "Misty Forest 3"
+                },
+                {
+                    "Text": "There?",
+                    "Target": "Misty Forest 2"
+                },
+                {
+                    "Text": "Here?",
+                    "Target": "Misty Grove"
+                }
+            ]
+        },
+        "Misty Forest 3": {
+            "Body": "You're lost where do you go?",
+            "Choices": [
+                {
+                    "Text": "There?",
+                    "Target": "Misty Forest 2"
+                },
+                {
+                    "Text": "Here?",
+                    "Target": "Misty Grove"
+                },
+                {
+                    "Text": "Over There?",
+                    "Target": "Misty Forest 4"
+                },
+                {
+                    "Text": "Where?",
+                    "Target": "Misty Forest 3"
+                }
+            ]
+        },
+        "Misty Forest 4": {
+            "Body": "You're Lost where do you go?",
+            "Choices": [
+                {
+                    "Text": "Here?",
+                    "Target": "Misty Grove"
+                },
+                {
+                    "Text": "Through that bush?",
+                    "Target": "Shrine of the Angel"
+                },
+                {
+                    "Text": "There?",
+                    "Target": "Misty Forest 2"
+                },
+                {
+                    "Text": "Where?",
+                    "Target": "Misty Forest 3"
+                },
+                {
+                    "Text": "Over There?",
+                    "Target": "Misty Forest 4"
+                }            
+            ]
+        },
+        "Shrine of the Angel": {
+            "Body": "You arrive at the Shrine of the Angel. A seren clearing within the forest with a shimmer of sunlight leaking through the leaves of the trees. You spot 10 gold in the Angel's hand drawing you in as if a blessing.",
+            "Choices": [
+                {
+                    "Interactable": true,
+                    "Requirement": false,
+                    "Text": "Take the gold",
+                    "Loc": "Shrine of the Angel",
+                    "Description": "You take the gold from the shrine",
+                    "Description2": "There is no more gold for you to take on the shrine."
+                },
+                {
+                    "Text": "Back Through the Forest",
+                    "Target": "Misty Grove"
+                }
+            ]
+        }
+    }
+}
